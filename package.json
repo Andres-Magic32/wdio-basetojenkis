@@ -1,0 +1,54 @@
+{
+  "name": "qa-automation",
+  "version": "1.0.0",
+  "description": "Test automation project. This project is focused on the execution of scripts that test, validate and verify many of the requirements that are in the different projects that we have in the company",
+  "main": "index.js",
+  "scripts": {
+    "remote-test-front": "npx wdio conf/remote-front.test.conf.js",
+    "remote-test-back": "npx wdio conf/remote-back.test.conf.js",
+    "local-test-chrome-front": "npx wdio conf/local-front-chrome.test.conf.js",
+    "local-test-back": "npx wdio conf/local-back.test.conf.js",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finerioconnect/qa-automation.git"
+  },
+  "author": "QA_Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/finerioconnect/qa-automation/issues"
+  },
+  "homepage": "https://github.com/finerioconnect/qa-automation#readme",
+  "dependencies": {
+    "@wdio/cli": "^7.25.4",
+    "chai": "^4.3.7",
+    "chrome-modheader": "^2.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "node-rsa": "^1.1.1",
+    "nodejs-base64": "^2.0.0",
+    "supertest": "^6.3.1",
+    "webdriverio": "^7.25.4"
+  },
+  "devDependencies": {
+    "@moroo/wdio-slack-reporter": "^2.1.1",
+    "@wdio/allure-reporter": "^7.25.4",
+    "@wdio/browserstack-service": "^7.20.9",
+    "@wdio/local-runner": "^7.25.4",
+    "@wdio/mocha-framework": "^7.25.4",
+    "@wdio/spec-reporter": "^7.25.4",
+    "chromedriver": "^107.0.3",
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "wdio-chromedriver-service": "^8.0.0",
+    "wdio-google-chat-service": "^1.0.2",
+    "wdio-json-reporter": "^0.4.0",
+    "wdio-slack-service": "^2.0.9",
+    "wdio-wait-for": "^3.0.0",
+    "wdio-wiremock-service": "^6.0.7"
+  }
+}
